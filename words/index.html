@@ -830,9 +830,9 @@ edt.focus();}
       }
 	  
 	  function saveTextAsHtml() {
-	    var textToWrite = '<!DOCTYPE html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="css/simple.min.css"></head><body>' + edt.innerHTML + '</body></html>';
+		var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+	    var textToWrite = '<!DOCTYPE html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/css/simple.min.css"><link rel="stylesheet" href="/css/custom.css"><link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/><title>' + fileNameToSaveAs + '</title></head><body>' + edt.innerHTML + '</body></html>';
 	    var textFileAsBlob = new Blob([textToWrite], {type:'text/html'});
-	    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
 	    var downloadLink = document.createElement("a");
 		downloadLink.download = fileNameToSaveAs;
 		downloadLink.innerHTML = "Download File";
