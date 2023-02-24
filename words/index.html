@@ -508,7 +508,7 @@ src=" data:image/gif;base64,R0lGODlhFgAWAPcAAP///1BgepKcpsDQ4BAoRKu2waWut32Jm0JS
 <span id="editMode" align="center" style="color:Black !important;margin:auto;width:100%;text-align:center;position:fixed;bottom:3px;padding:0;margin:0;max-height:26px !important;">
 <label style="float:right;padding-left:5px;position:relative;top:3px;left:-15px;font-family:Nunito, Arial, Helvetica, sans-serif !important;" for="switchBox">Show HTML</label>
 <input style="float:right;margin-left:30px !important;position:relative;top:4px;left:-15px;" type="checkbox" name="switchMode" id="switchBox" onchange="setDocMode(this.checked);" />
-<SPAN style="position:relative;top:-2px;color:#444444;font-family:Nunito, Arial, Helvetica, sans-serif !important;"><input id="inputFileNameToSaveAs" style="font-size:14px;height:22px;color:#545454;padding-left:5px;" title="Document Name" value="New-Document-Name"></input></SPAN>
+<SPAN style="position:relative;top:-2px;color:#444444;font-family:Nunito, Arial, Helvetica, sans-serif !important;"><input id="inputFileNameToSaveAs" style="font-size:14px;height:22px;color:#545454;padding-left:5px;" title="Document Name" value="New-Title"></input></SPAN>
 <span id="menu" style="padding-left:25px;padding-right:15px;position:relative;top:1px;font-size:18px;font-family:Nunito, Arial, Helvetica, sans-serif !important;font-weight:700;letter-spacing:1px;"></span></span>
 <script type="text/javascript" charset="utf-8">
 var DocContentName = "New-Document-Name";
@@ -738,7 +738,7 @@ function initDoc() {
   document.getElementById("PageView").style.width = btnW + 9 + 'px';
   document.getElementById("HColor").style.height = btnH + 'px'; 
   document.getElementById("TColor").style.height = btnH + 'px'; 
-  DocContentName = localStorage.getItem("EditBox3CurrDocName") || "New-Document-Name";
+  DocContentName = localStorage.getItem("EditBox3CurrDocName") || "New-Title";
   document.getElementById("inputFileNameToSaveAs").value = DocContentName;
   edt.innerHTML = localStorage.getItem("EditBox3") || "";
   if (document.compForm.switchMode.checked) {setDocMode(true);};
@@ -1094,7 +1094,7 @@ edt.addEventListener("keydown", function(e) { if (!(e.keyCode >= 33 && e.keyCode
 		  edt.innerHTML = "";
 		  location.reload(true);
 		  localStorage.setItem('theme', ct);
-		  DocContentName = "New-Document-Name";
+		  DocContentName = "New-Title";
 		  localStorage.setItem("EditBox3CurrDocName",DocContentName);
 		  document.getElementById("inputFileNameToSaveAs").value = DocContentName;
 		};
