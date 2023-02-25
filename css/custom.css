@@ -1,3 +1,15 @@
 :root {
     --accent: #00b3ff;
   }
+main {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+main > section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
