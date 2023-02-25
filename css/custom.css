@@ -12,8 +12,8 @@ main {
     scrollbar-width: none;  /* Firefox */
 }
 main > section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 main::-webkit-scrollbar {
     display: none;
