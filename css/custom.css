@@ -1,3 +1,7 @@
 :root {
     --accent: #00b3ff;
-  }
+}
+img {
+    float: left;
+    margin-right: .5em;
+}
